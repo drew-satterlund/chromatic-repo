@@ -1,8 +1,22 @@
 Simplest Incoming data: 
 
-    unit_sizes (bag size)
-    unit_components (what coffee?)
-    line_quantity (how many?)
+    array of objects?
+        
+        [
+            {
+                unit_size : "R",
+                unit_components : "keynote",
+                line_quantity : 2
+            },
+            {
+                unit_size : "H",
+                unit_components : "gamut",
+                line_quantity : 2
+            }
+        ]
+
+
+
     
 Data output: 
 
@@ -14,3 +28,5 @@ Data output:
         actual_weight
         time
         signature
+
+Considerations:
