@@ -1,0 +1,16 @@
+Simplest Incoming data: 
+
+    unit_sizes (bag size)
+    unit_components (what coffee?)
+    line_quantity (how many?)
+    
+Data output: 
+
+    list of roasts 
+
+        roast_profile
+        lot
+        green_weight
+        actual_weight
+        time
+        signature
