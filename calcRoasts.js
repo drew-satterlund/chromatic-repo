@@ -13,24 +13,31 @@ const orders = [
     }
 ];
 
+// returns array of objects based on total poundages
+
+
 const calculateRoasts = arr => {
     const roastList = [];
     arr.forEach(roast => {
         let batches = Math.ceil(roast.pounds / roast.batch_size);
-        console.log(`${roast.coffee} batches: ${batches}`);
         for (let i = 0; i < batches; i++) {
             const batch = { Coffee : roast.coffee, Pounds : roast.batch_size};
-            schedule.push(batch);
-        }
-    })
+            roastList.push(batch);
+        };
+    });
+    return roastList;
 }
 
-function addBatch([...batch]) {
+
+function addBatches(batch) {
     batch.forEach(batch => {
         schedule.push(batch)
     })
 }
 
-calculateRoasts(orders)
-addBatch([{ Coffee : 'opus', Pounds : 100}, {Coffee : 'low', Pounds : 80}])
-console.log(schedule);
+// accepts array of orders and pushes to schedule
+
+addBatches(calculateRoasts(orders));
+addBatches([{Coffee : 'opus', Pounds : 30}])
+console.log(schedule)
+
