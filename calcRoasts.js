@@ -25,5 +25,12 @@ const calculateRoasts = arr => {
     })
 }
 
-calculateRoasts(orders);
-console.log(schedule)
+function addBatch([...batch]) {
+    batch.forEach(batch => {
+        schedule.push(batch)
+    })
+}
+
+calculateRoasts(orders)
+addBatch([{ Coffee : 'opus', Pounds : 100}, {Coffee : 'low', Pounds : 80}])
+console.log(schedule);
